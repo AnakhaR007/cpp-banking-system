@@ -25,10 +25,17 @@ cout<<"4. Exit"<<endl;
 void DepositMoney(){
 cout<<"How much would you like to deposit? "<<endl;
 cin>> depositAmount;
+
+while (depositAmount<=0){
+cout<<"Inavlid input. Please enter a postive number"<<endl;
+cin>> depositAmount;
+}
+//else{
 cout<<"Deposit succesfull! "<<endl;
 balance=balance+depositAmount;
 cout<<"Current balance: $"<<balance<<endl;
 }
+
 
 //Displays Withdrawal options and reads in withdrawal amount. Checks certain conditions too. 
 void WithdrawMoney(){
@@ -38,14 +45,20 @@ cout<<" Are you sure? Y/N "<<endl;
 cout<<"How much would you like to withdraw?"<<endl;
 cin>>withdrawAmount;
     
-if(withdrawAmount>balance)
-cout<<"Insufficent funds"<<endl;
-    
-else{
+while(withdrawAmount>balance || withdrawAmount<=0 ){
+    if(withdrawAmount>balance){
+cout<<"Insufficent funds. Please try again"<<endl;
+    }
+else if( withdrawAmount<=0){
+cout<<"Invalid input. Please enter a positive number"<<endl;
+}
+cin>>withdrawAmount;
+}
+
 cout<<"Withdrawal succesful"<<endl;
 balance=balance-withdrawAmount;
 cout<<"Current balance: $"<<balance<<endl;
-}
+
 }
 
 else if( confirm=='N'|| confirm=='n')
