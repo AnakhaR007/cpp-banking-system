@@ -39,5 +39,5 @@ This is a console-based banking system written in C++. It allows users to perfor
 
 ## Author
 
-Anakha Rishad
+Anakha Rishad, 
 Computer Science Student
