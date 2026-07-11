@@ -4,7 +4,15 @@
 
 This is a console-based banking system written in C++. It allows users to perform basic banking operations while practicing fundamental C++ programming concepts.
 
+## How to Run
 
+1. Clone this repository.
+2. Compile the program:
+   g++ banking_system.cpp -o banking_system
+3. Run:
+   ./banking_system
+
+   
 ## Features
 
 - Deposit money
